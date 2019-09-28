@@ -9,7 +9,15 @@
 import Foundation
 
 print("Hello, World!")
-print("hey there")
+
+
 //  Lecture 1
-let input = Int(readLine())
-Lecture1.checkOddEven(input: input)
+print("please enter a integer to check odd even")
+if let input = readLine(), let intInput = Int(input) {
+    Lecture1().isEven(input: intInput) ? print("\(input) is EVEN") : print("\(input) is ODD")
+} else {
+    print("bad input")
+}
+
+
+

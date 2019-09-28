@@ -9,7 +9,7 @@
 import Foundation
 
 class Lecture1 {
-    static func checkOddEven(input: Int) -> Bool {
+    func isEven(input: Int) -> Bool {
         if input%2 == 0 {
             return true
         }
