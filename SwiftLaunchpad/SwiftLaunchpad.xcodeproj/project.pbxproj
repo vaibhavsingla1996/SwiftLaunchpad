@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		240AD1DE233FA97C002042F5 /* Lecture10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240AD1DD233FA97C002042F5 /* Lecture10.swift */; };
 		24D2ECF3233F1C5D002D5313 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2ECF2233F1C5D002D5313 /* main.swift */; };
 		24D2ECFA233F1E57002D5313 /* Lecture1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2ECF9233F1E57002D5313 /* Lecture1.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		240AD1DD233FA97C002042F5 /* Lecture10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture10.swift; sourceTree = "<group>"; };
 		24D2ECEF233F1C5D002D5313 /* SwiftLaunchpad */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftLaunchpad; sourceTree = BUILT_PRODUCTS_DIR; };
 		24D2ECF2233F1C5D002D5313 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		24D2ECF9233F1E57002D5313 /* Lecture1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture1.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 			children = (
 				24D2ECF2233F1C5D002D5313 /* main.swift */,
 				24D2ECF9233F1E57002D5313 /* Lecture1.swift */,
+				240AD1DD233FA97C002042F5 /* Lecture10.swift */,
 			);
 			path = SwiftLaunchpad;
 			sourceTree = "<group>";
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24D2ECFA233F1E57002D5313 /* Lecture1.swift in Sources */,
+				240AD1DE233FA97C002042F5 /* Lecture10.swift in Sources */,
 				24D2ECF3233F1C5D002D5313 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

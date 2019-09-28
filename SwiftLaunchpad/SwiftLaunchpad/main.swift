@@ -12,12 +12,65 @@ print("Hello, World!")
 
 
 //  Lecture 1
+/*
 print("please enter a integer to check odd even")
 if let input = readLine(), let intInput = Int(input) {
     Lecture1().isEven(input: intInput) ? print("\(input) is EVEN") : print("\(input) is ODD")
 } else {
     print("bad input")
 }
+*/
+
+// Lecture 10
+let lecture = Lecture10()
+
+// Printing sum of array
+print("<-----------Printing sum of array------------->")
+let array = [1, 2, 3, 4, 5]
+let sum = lecture.calculateSum(array, len: array.count)
+print("Sum is \(sum)")
+
+// Printing factorial
+print("\n\n\n<-----------Printing factorial------------->")
+let factInput = 5
+let factorialOfInput = lecture.calculateFactorial(input: factInput)
+print("Factorial of \(factInput) is \(factorialOfInput)")
+
+// Printing nth fibonacci number
+print("\n\n\n<-----------Printing nth fibonacci number------------->")
+let n = 5
+if let fibonacciOfInput = lecture.calculateFibonacci(till: n) {
+    print("nth sequence of \(n) is \(fibonacciOfInput)")
+} else {
+    print("Error - Enter a whole number")
+}
+
+// Search key in an array
+print("\n\n\n<-----------Search key in an array------------->")
+let toSearchArray = [1, 2, 3, 4, 5 , 6, 7]
+let keyToBeSearched = 7
+lecture.searchElement(array: toSearchArray, startIndex: 0, arraycount: toSearchArray.count, key: keyToBeSearched) ? print("Found element \(keyToBeSearched)") : print("Not Found element \(keyToBeSearched)")
 
 
+// first index of key in array
+print("\n\n\n<-----------Search key's first elemennt in an array------------->")
+if let index = lecture.searchFirstIndex(array: toSearchArray, startIndex: 0, arrayCount: toSearchArray.count, key:  keyToBeSearched) {
+    print("Found element first index at \(index)")
+} else {
+    print("Not Found \(keyToBeSearched) in \(toSearchArray) on any index")
+}
+// last index in array
+print("\n\n\n<-----------Search key's last elemennt in an array------------->")
+if let index = lecture.findLastIndexInArray(array: toSearchArray, startIndex: 0, count: toSearchArray.count, key: keyToBeSearched) {
+    print("Found element last index at \(index)")
+} else {
+    print("Not Found \(keyToBeSearched) in \(toSearchArray) on any index")
+}
 
+// Check an array is sorted or not
+print("\n\n\n<-----------Check an array is sorted or not------------->")
+lecture.isSorted(array: toSearchArray, startIndex: 0, count: toSearchArray.count) ? print("the given array is Sorted") : print("the given array is NOT Sorted")
+
+// Binary search
+print("\n\n\n<-----------Binary search------------->")
+lecture.binarySearch(array: toSearchArray, startIndex: 0, endIndex: toSearchArray.count, key: keyToBeSearched) ? print("Found \(keyToBeSearched) in \(toSearchArray)") : print("Not Found \(keyToBeSearched) in \(toSearchArray)")
