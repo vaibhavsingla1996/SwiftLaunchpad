@@ -13,6 +13,11 @@ print("Hello, World!")
 
 
 let lecture = Lecture11()
+
+
+
+
+
 //  Lecture 1
 /*
 print("please enter a integer to check odd even")
@@ -76,9 +81,15 @@ lecture.isSorted(array: toSearchArray, startIndex: 0, count: toSearchArray.count
 print("\n\n\n<-----------Binary search------------->")
 lecture.binarySearch(array: toSearchArray, startIndex: 0, endIndex: toSearchArray.count, key: keyToBeSearched) ? print("Found \(keyToBeSearched) in \(toSearchArray)") : print("Not Found \(keyToBeSearched) in \(toSearchArray)")
 */
-lecture.towerOfHanoi(numberOfDiscs: 3, source: "A", helper: "B", destination: "C")
+
+
+// lecture 11
+/*lecture.towerOfHanoi(numberOfDiscs: 3, source: "A", helper: "B", destination: "C")
 var ar = ["A", "B", "C"]
 var out: [String] = Array.init(repeating: "", count: ar.count)
 lecture.printSubSequence(inputArray: &ar, outputArray: &out, startIndex: 0, outputIndex: 0)
 print("\n\n\n<-----------printPermutation------------->")
 lecture.printPermutation(inputArray: &ar, startIndex: 0)
+ */
+
+
