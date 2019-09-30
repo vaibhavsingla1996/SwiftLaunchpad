@@ -63,9 +63,9 @@ class Lecture11 {
         return tempArray
     }
     
-    func nQueenProblem(matrix:[[Int]], index: Int, cout: Int) -> Bool {
-        if index == n {
-            for
+    func nQueenProblem(matrix:[[Int]], index: Int, conut: Int) -> Bool {
+        if index == conut {
+            
         }
     }
     
