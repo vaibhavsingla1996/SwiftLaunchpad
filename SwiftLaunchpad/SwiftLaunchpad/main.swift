@@ -12,7 +12,7 @@ print("Hello, World!")
 
 
 
-let lecture = Lecture11()
+let lecture = Lecture9()
 
 
 
@@ -27,6 +27,17 @@ if let input = readLine(), let intInput = Int(input) {
     print("bad input")
 }
 */
+
+// Lecture 9
+let inputArray: [[Int]] = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
+
+print("\n\n\n<-----------spiralPrint------------->")
+lecture.spiralPrint(inputArray: inputArray)
+
+print("\n\n\n<-----------wavePrint------------->")
+lecture.wavePrint(inputArray: inputArray)
+
+
 
 // Lecture 10
 
