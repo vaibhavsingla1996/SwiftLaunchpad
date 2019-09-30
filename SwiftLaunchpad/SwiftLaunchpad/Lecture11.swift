@@ -67,9 +67,7 @@ class Lecture11 {
         if index == conut {
             
         }
+        return false
     }
-    
-    let count = 4
-    var ar[][] = [[Int]]
     
 }
