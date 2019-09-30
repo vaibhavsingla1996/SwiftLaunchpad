@@ -11,6 +11,8 @@ import Foundation
 print("Hello, World!")
 
 
+
+let lecture = Lecture11()
 //  Lecture 1
 /*
 print("please enter a integer to check odd even")
@@ -22,9 +24,8 @@ if let input = readLine(), let intInput = Int(input) {
 */
 
 // Lecture 10
-let lecture = Lecture10()
 
-// Printing sum of array
+/*// Printing sum of array
 print("<-----------Printing sum of array------------->")
 let array = [1, 2, 3, 4, 5]
 let sum = lecture.calculateSum(array, len: array.count)
@@ -74,3 +75,10 @@ lecture.isSorted(array: toSearchArray, startIndex: 0, count: toSearchArray.count
 // Binary search
 print("\n\n\n<-----------Binary search------------->")
 lecture.binarySearch(array: toSearchArray, startIndex: 0, endIndex: toSearchArray.count, key: keyToBeSearched) ? print("Found \(keyToBeSearched) in \(toSearchArray)") : print("Not Found \(keyToBeSearched) in \(toSearchArray)")
+*/
+lecture.towerOfHanoi(numberOfDiscs: 3, source: "A", helper: "B", destination: "C")
+var ar = ["A", "B", "C"]
+var out: [String] = Array.init(repeating: "", count: ar.count)
+lecture.printSubSequence(inputArray: &ar, outputArray: &out, startIndex: 0, outputIndex: 0)
+print("\n\n\n<-----------printPermutation------------->")
+lecture.printPermutation(inputArray: &ar, startIndex: 0)
