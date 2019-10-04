@@ -55,7 +55,7 @@ class Lecture11 {
         
     }
     
-    func swap(arr: [String], index1: Int, index2: Int) -> [String] {
+    func swap<Element: Comparable>(arr: [Element], index1: Int, index2: Int) -> [Element] {
         var tempArray = arr
         let temp = arr[index1]
         tempArray[index1] = tempArray[index2]
@@ -115,13 +115,53 @@ class Lecture11 {
         return resultArray
     }
     
+    func quickSort<Element: Comparable>(startIndex: Int, endIndex: Int, array: [Element]) -> [Element] {
+        if startIndex >= endIndex {
+            return array
+        }
+        let tuple = partition(startIndex: startIndex, endIndex: endIndex, array)
+        
+        let newArray =  quickSort(startIndex: startIndex, endIndex: tuple.partitionIndex-1, array: tuple.array)
+        return quickSort(startIndex: tuple.partitionIndex+1, endIndex: endIndex, array: newArray)
+        
+    }
     
-    func nQueenProblem(matrix:[[Int]], index: Int, conut: Int) -> Bool {
-        if index == conut {
+    func partition<Element: Comparable>(startIndex: Int, endIndex: Int, _ array: [Element]) -> (array: [Element], partitionIndex: Int) {
+        var tempArray = array
+        let pivotElement = array[endIndex-1]
+        var i = startIndex-1
+        
+        for (index, element) in tempArray[startIndex..<endIndex].enumerated() {
+            // shifting small element of array in the begining of array to divide it in 2 parts
+//            if index == tempArray.count-1 {
+//                break
+//            }
+            if element <= pivotElement {
+                i += 1
+                tempArray = swap(arr: array, index1: i, index2: index)
+            }
+        }
+        let pivotIndex = i+1
+        // replacing pivot index to its orignal sorted position
+        tempArray = swap(arr: tempArray, index1: endIndex-1, index2: pivotIndex)
+        
+        return (array, pivotIndex)
+    }
+    
+    
+    
+    func nQueenProblem(matrix:[[Int]], index: Int, count: Int) -> Bool {
+        if index == count {
             
         }
+        
         return false
     }
+
+    func checkWeatherPositionIsValidForQueen(matrix:[[Int]], rowIndex: Int, columnIndex: Int, count: Int) -> Bool {
+       return true
+    }
+    
     
     
     // rat in a maze

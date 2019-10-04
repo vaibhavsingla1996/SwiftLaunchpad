@@ -109,3 +109,6 @@ print("\n\n\n<-----------merge sort------------->")
 print(lecture.mergeSort(array: [2, 3, 10, 30, 55, 43, 23, 50]))
 print(lecture.mergeSort(array: ["2", "3", "10", "30", "55", "43", "23", "50"]))
 
+print("\n\n\n<-----------quick sort------------->")
+let quickSortArray = [2, 3, 10, 30, 55, 43, 23, 50]
+print(lecture.quickSort(startIndex: 0, endIndex: quickSortArray.count-1, array: quickSortArray))
