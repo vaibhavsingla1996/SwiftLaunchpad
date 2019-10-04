@@ -63,6 +63,59 @@ class Lecture11 {
         return tempArray
     }
     
+    // refer https://www.raywenderlich.com/977854-data-structures-algorithms-in-swift/lessons/8
+    func mergeSort<Element: Comparable>(array: [Element]) -> [Element] {
+        if array.count == 1 {
+            return array
+        }
+        let middle = array.count/2
+        let leftArray = mergeSort(array: Array(array[..<middle]))
+        let rightArray = mergeSort(array: Array(array[middle...]))
+        return merge(leftArray, rightArray)
+        
+    }
+    
+    func merge<Element: Comparable>(_ left: [Element], _ right: [Element]) -> [Element] {
+        var leftIndex = 0
+        var rightIndex = 0
+        var resultArray: [Element] = []
+        
+        while leftIndex < left.count && rightIndex < right.count {
+            let leftElement = left[leftIndex]
+            let rightElement = right[rightIndex]
+           
+            if leftElement < rightElement {
+                // append left array element in result array
+                resultArray.append(leftElement)
+                leftIndex += 1
+            } else if rightElement < leftElement {
+                // append right array element in result arraty
+                resultArray.append(rightElement)
+                rightIndex += 1
+            } else {
+                // equal element found
+                resultArray.append(leftElement)
+                leftIndex += 1
+                
+                resultArray.append(rightElement)
+                rightIndex += 1
+            }
+        }
+        
+        // appending rest of elements of left array if left
+        if leftIndex < left.count {
+            resultArray.append(contentsOf: left[leftIndex...])
+        }
+        
+        // appending rest of elements of right array if left
+        if rightIndex < right.count {
+            resultArray.append(contentsOf: right[rightIndex...])
+        }
+        
+        return resultArray
+    }
+    
+    
     func nQueenProblem(matrix:[[Int]], index: Int, conut: Int) -> Bool {
         if index == conut {
             
@@ -70,4 +123,8 @@ class Lecture11 {
         return false
     }
     
+    
+    // rat in a maze
+    
+    // sudoku
 }

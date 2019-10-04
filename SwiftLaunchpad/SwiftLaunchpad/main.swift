@@ -12,7 +12,7 @@ print("Hello, World!")
 
 
 
-let lecture = Lecture9()
+let lecture = Lecture11()
 
 
 
@@ -29,14 +29,14 @@ if let input = readLine(), let intInput = Int(input) {
 */
 
 // Lecture 9
-let inputArray: [[Int]] = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
+/*let inputArray: [[Int]] = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
 
 print("\n\n\n<-----------spiralPrint------------->")
 lecture.spiralPrint(inputArray: inputArray)
 
 print("\n\n\n<-----------wavePrint------------->")
 lecture.wavePrint(inputArray: inputArray)
-
+*/
 
 
 // Lecture 10
@@ -95,12 +95,17 @@ lecture.binarySearch(array: toSearchArray, startIndex: 0, endIndex: toSearchArra
 
 
 // lecture 11
-/*lecture.towerOfHanoi(numberOfDiscs: 3, source: "A", helper: "B", destination: "C")
+
+lecture.towerOfHanoi(numberOfDiscs: 3, source: "A", helper: "B", destination: "C")
+
 var ar = ["A", "B", "C"]
 var out: [String] = Array.init(repeating: "", count: ar.count)
 lecture.printSubSequence(inputArray: &ar, outputArray: &out, startIndex: 0, outputIndex: 0)
-print("\n\n\n<-----------printPermutation------------->")
-lecture.printPermutation(inputArray: &ar, startIndex: 0)
- */
 
+print("\n\n\n<-----------print Permutation------------->")
+lecture.printPermutation(inputArray: &ar, startIndex: 0)
+
+print("\n\n\n<-----------merge sort------------->")
+print(lecture.mergeSort(array: [2, 3, 10, 30, 55, 43, 23, 50]))
+print(lecture.mergeSort(array: ["2", "3", "10", "30", "55", "43", "23", "50"]))
 
